@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "about": "O mně",
+    "development": "Vývoj",
+    "references": "Reference",
+    "services": "Služby",
+    "contact": "Kontakt"
+  },
+  "commercial": {
+    "title": "Komerční pohled"
+  }
+}

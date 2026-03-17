@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "about": "About me",
+    "development": "Development",
+    "references": "References",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "commercial": {
+    "title": "Commercial view"
+  }
+}

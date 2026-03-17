@@ -18,66 +18,57 @@ const menuItems: Ref<MenuItem[]> = ref([
   { label: 'nav.contact', href: '#contact' },
 ])
 
+
 </script>
 
 <template>
   <nav class="top-bar">
-    <div class="logo">
-      <img src="@/assets/logo.svg" alt="Logo" class="logo-img" />
-    </div>
     <div class="menu-container">
-      <a
-        v-for="item in menuItems"
-        :key="item.label"
-        :href="item.href"
-        class="menu-item"
-        :class="{ active: commercialStore.activeSection === item.href }"
-        @click="commercialStore.setActiveSection(item.href)"
-      >
-        {{ $t(item.label) }}
-      </a>
+      <img src="@/assets/logo.svg" alt="Logo" class="logo-img" />
+      <div class="menu-buttons">
+        <a
+          v-for="item in menuItems"
+          :key="item.label"
+          :href="item.href"
+          class="menu-item"
+          :class="{ active: commercialStore.activeSection === item.href }"
+          @click="commercialStore.setActiveSection(item.href)"
+        >
+          {{ $t(item.label) }}
+        </a>
+      </div>
     </div>
   </nav>
 </template>
 
 <style scoped>
   .top-bar {
-    position: sticky;
+    position: fixed;
     top: 20px;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 0 20px;
-    gap: 20px;
+    pointer-events: none;
   }
 
-  .logo {
+  .menu-container {
     display: flex;
     align-items: center;
+    gap: 64px;
     background: rgba(26, 26, 26, 0.7);
     backdrop-filter: blur(10px);
-    padding: 8px;
-    border-radius: 12px;
+    padding: 8px 30px 8px 16px;
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    pointer-events: auto;
   }
 
   .logo-img {
     width: 32px;
     height: 32px;
-  }
-
-  .menu-container {
-    display: flex;
-    gap: 30px;
-    background: rgba(26, 26, 26, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 12px 30px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
   .menu-item {
@@ -92,5 +83,11 @@ const menuItems: Ref<MenuItem[]> = ref([
 
   .menu-item:hover, .menu-item.active {
     color: var(--main-orange);
+  }
+
+  .menu-buttons{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
   }
 </style>

@@ -9,6 +9,7 @@
 
   --main-orange: #ff6b35;
   --main-orange-light: #ff8e66;
+  --main-orange-lighter: #ffcdbb;
   --main-orange-dark: #cc562a;
 
   --main-gradient: linear-gradient(45deg, var(--main-gray-darker) 0%, var(--main-black) 100%);
@@ -20,15 +21,27 @@
   --main-gray-darker: #4a4a4a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   padding: 0;
   margin: 0;
 }
 
-a, h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
+  font-family: KoneInformation, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a{
   font-family: KoneInformation, sans-serif;
 }
 
 p, span, button, input, textarea{
   font-family: Inter, sans-serif;
+  padding: 0;
+  margin: 0;
 }

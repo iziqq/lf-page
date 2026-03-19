@@ -5,7 +5,9 @@
 <template>
   <section id="about" class="about-section">
     <div class="name-container">
-      <img src="@/assets/logo.svg" alt="Logo" class="logo-img" />
+      <div class="logo-wrapper">
+        <img src="@/assets/logo.svg" alt="Logo" class="logo-img" />
+      </div>
       <h1 class="description">
         {{ $t('commercial.about.description') }}
       </h1>
@@ -49,12 +51,59 @@
     font-weight: 400;
   }
 
-  .logo-img{
+  .logo-wrapper {
     position: absolute;
     left: -80px;
     top: -80px;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .logo-img{
     width: 120px;
     transform: rotate(-30deg);
+    animation: shake 10s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes float-mobile {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes shake {
+    0%, 90%, 100% {
+      transform: rotate(-30deg);
+    }
+    92% {
+      transform: rotate(-35deg);
+    }
+    94% {
+      transform: rotate(-25deg);
+    }
+    96% {
+      transform: rotate(-35deg);
+    }
+    98% {
+      transform: rotate(-25deg);
+    }
   }
 
   @media (max-width: 1024px) {
@@ -71,12 +120,17 @@
       align-items: center;
     }
 
-    .logo-img{
+    .logo-wrapper {
       position: absolute;
       left: calc(50% - 30px);
       top: -60px;
+      animation: float-mobile 5s ease-in-out infinite;
+    }
+
+    .logo-img{
       width: 60px;
       transform: rotate(-30deg);
+      animation: shake 15s ease-in-out infinite;
     }
   }
 </style>

@@ -8,13 +8,6 @@
       <h1 class="name">
         {{ $t('commercial.about.name') }}
       </h1>
-      <h4 class="description">
-        {{ $t('commercial.about.description') }}
-      </h4>
-    </div>
-
-    <div class="image-container">
-
     </div>
   </section>
 </template>
@@ -44,12 +37,6 @@
       text-align: center;
       justify-content: center;
     }
-
-    .image-container {
-      width: 100%;
-      max-width: 350px;
-      height: 500px;
-    }
   }
 
   .name-container{
@@ -60,27 +47,9 @@
     text-align: right;
   }
 
-  .image-container{
-    flex: 1;
-
-    width: 450px;
-    height: 850px;
-
-    border: 2px solid var(--main-white);
-    border-radius: 16px;
-    box-shadow: var(--main-box-shadow);
-  }
-
   .name {
     font-size: clamp(40px, 4.8vw, 64px);
     font-weight: 700;
     color: var(--main-orange);
-  }
-
-  .description {
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
-    margin-bottom: 40px;
-    color: var(--main-gray);
-    font-weight: 300;
   }
 </style>

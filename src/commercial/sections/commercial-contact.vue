@@ -1,11 +1,12 @@
 <script setup lang="ts">
-
+import CommercialWatermark from '../components/commercial-watermark.vue'
 </script>
 
 <template>
   <section id="contact" class="commercial-section">
+    <commercial-watermark :text="$t('nav.contact')" />
     <div class="container">
-      <h2>{{ $t('nav.contact') }}</h2>
+      <!-- Obsah sekce Kontakt -->
     </div>
   </section>
 </template>

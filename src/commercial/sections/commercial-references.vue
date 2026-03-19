@@ -1,11 +1,12 @@
 <script setup lang="ts">
-
+import CommercialWatermark from '../components/commercial-watermark.vue'
 </script>
 
 <template>
   <section id="references" class="commercial-section">
+    <commercial-watermark :text="$t('nav.references')" />
     <div class="container">
-      <h2>{{ $t('nav.references') }}</h2>
+      <!-- Obsah sekce Reference -->
     </div>
   </section>
 </template>

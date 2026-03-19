@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.commercial-section h2 {
+.commercial-section .commercial-watermark {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,7 +38,7 @@
 }
 
 @media (max-width: 1024px) {
-  .commercial-section h2 {
+  .commercial-section .commercial-watermark {
     font-size: clamp(6rem, 25vw, 15rem);
   }
 }
@@ -48,13 +48,13 @@
     padding: 80px 20px;
   }
 
-  .commercial-section h2 {
+  .commercial-section .commercial-watermark {
     font-size: clamp(4rem, 20vw, 10rem);
   }
 }
 
 @media (max-width: 480px) {
-  .commercial-section h2 {
+  .commercial-section .commercial-watermark {
     font-size: clamp(3rem, 18vw, 6rem);
   }
 }

@@ -25,7 +25,6 @@ import CommercialServices from "@/commercial/sections/commercial-services.vue";
     position: relative;
     display: flex;
     flex-direction: column;
-    background: var(--main-gradient);
     min-height: 100dvh;
     width: 100dvw;
   }

@@ -4,7 +4,8 @@
     "development": "Vývoj",
     "references": "Reference",
     "services": "Služby",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "login": "Přihlásit se"
   },
   "commercial": {
     "title": "Komerční pohled",

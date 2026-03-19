@@ -14,8 +14,18 @@
   .services-section {
     min-height: 100vh;
     padding: 100px 20px;
-    background: var(--main-black-light);
     color: var(--main-white);
+  }
+
+  @media (max-width: 768px) {
+    .services-section {
+      padding: 80px 20px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
   }
 
   .container {

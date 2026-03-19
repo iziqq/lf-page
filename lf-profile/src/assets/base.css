@@ -19,15 +19,18 @@
   --main-gray: #e8e8e8;
   --main-gray-dark: #c0c0c0;
   --main-gray-darker: #4a4a4a;
+
+  --main-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body{
+body, #app{
   padding: 0;
   margin: 0;
+  background: var(--main-gradient);
 }
 
 h1, h2, h3, h4, h5, h6{

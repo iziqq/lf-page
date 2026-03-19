@@ -4,7 +4,8 @@
     "development": "Development",
     "references": "References",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "login": "Login"
   },
   "commercial": {
     "title": "Commercial view",

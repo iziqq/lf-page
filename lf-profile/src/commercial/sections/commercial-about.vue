@@ -11,12 +11,6 @@
       <h4 class="description">
         {{ $t('commercial.about.description') }}
       </h4>
-      <a
-        href="#services"
-        class="cta-button"
-      >
-        {{ $t('commercial.about.services_button') }}
-      </a>
     </div>
 
     <div class="image-container">
@@ -38,6 +32,26 @@
     gap: 100px;
   }
 
+  @media (max-width: 1024px) {
+    .about-section {
+      flex-direction: column-reverse;
+      gap: 40px;
+      padding-top: 100px;
+      justify-content: center;
+    }
+
+    .name-container {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 350px;
+      height: 500px;
+    }
+  }
+
   .name-container{
     flex: 1;
     display: flex;
@@ -52,7 +66,9 @@
     width: 450px;
     height: 850px;
 
-    background: var(--main-white);
+    border: 2px solid var(--main-white);
+    border-radius: 16px;
+    box-shadow: var(--main-box-shadow);
   }
 
   .name {

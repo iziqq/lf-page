@@ -83,24 +83,4 @@
     color: var(--main-gray);
     font-weight: 300;
   }
-
-  .cta-button {
-    display: inline-block;
-    padding: 16px 32px;
-    width: fit-content;
-    background: var(--main-orange);
-    color: var(--main-white);
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    font-family: Inter, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    &&:hover {
-      background: var(--main-orange-dark);
-      box-shadow: 0 10px 20px rgba(255, 107, 53, 0.2);
-    }
-  }
 </style>

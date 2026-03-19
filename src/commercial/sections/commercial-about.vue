@@ -81,7 +81,7 @@
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(5px);
     }
     100% {
       transform: translateY(0px);
@@ -103,6 +103,24 @@
     }
     98% {
       transform: rotate(-25deg);
+    }
+  }
+
+  @keyframes shake-mobile {
+    0%, 90%, 100% {
+      transform: rotate(0deg);
+    }
+    92% {
+      transform: rotate(-5deg);
+    }
+    94% {
+      transform: rotate(5deg);
+    }
+    96% {
+      transform: rotate(-5deg);
+    }
+    98% {
+      transform: rotate(5deg);
     }
   }
 
@@ -129,8 +147,8 @@
 
     .logo-img{
       width: 60px;
-      transform: rotate(-30deg);
-      animation: shake 15s ease-in-out infinite;
+      transform: rotate(0deg);
+      animation: shake-mobile 15s ease-in-out infinite;
     }
   }
 </style>

@@ -5,6 +5,7 @@ import CommercialAbout from "@/commercial/sections/commercial-about.vue";
 import CommercialContact from "@/commercial/sections/commercial-contact.vue";
 import CommercialReferences from "@/commercial/sections/commercial-references.vue";
 import CommercialServices from "@/commercial/sections/commercial-services.vue";
+import "./commercial-styles.css";
 </script>
 
 <template>

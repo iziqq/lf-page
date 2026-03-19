@@ -55,24 +55,35 @@
     position: absolute;
     left: -80px;
     top: -80px;
-    animation: float 6s ease-in-out infinite;
+    animation: float 15s ease-in-out infinite;
   }
 
   .logo-img{
     width: 120px;
-    transform: rotate(-30deg);
-    animation: shake 10s ease-in-out infinite;
+    animation: rotate-head 15s ease-in-out infinite;
+  }
+
+  @keyframes rotate-head {
+    0% {
+      transform: rotate(-30deg);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
   }
 
   @keyframes float {
     0% {
-      transform: translateY(0px);
+      transform: translateX(0px);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateX(380px);
     }
     100% {
-      transform: translateY(0px);
+      transform: translateX(0px);
     }
   }
 
@@ -87,25 +98,6 @@
       transform: translateY(0px);
     }
   }
-
-  @keyframes shake {
-    0%, 90%, 100% {
-      transform: rotate(-30deg);
-    }
-    92% {
-      transform: rotate(-35deg);
-    }
-    94% {
-      transform: rotate(-25deg);
-    }
-    96% {
-      transform: rotate(-35deg);
-    }
-    98% {
-      transform: rotate(-25deg);
-    }
-  }
-
   @keyframes shake-mobile {
     0%, 90%, 100% {
       transform: rotate(0deg);

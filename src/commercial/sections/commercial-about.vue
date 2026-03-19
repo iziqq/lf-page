@@ -55,12 +55,38 @@
     position: absolute;
     left: -80px;
     top: -80px;
-    animation: float 15s ease-in-out infinite;
+    animation: logo-sequence-wrapper 60s ease-in-out infinite;
   }
 
   .logo-img{
     width: 120px;
-    animation: rotate-head 15s ease-in-out infinite;
+    animation: logo-sequence-img 60s ease-in-out infinite;
+  }
+
+  @keyframes logo-sequence-wrapper {
+    0%, 50% { transform: translate(0, 0); }
+    58% { transform: translate(380px, 0); } /* Reposition Right (5s) */
+    67% { transform: translate(380px, 0); } /* Idle (5s) */
+    75% { transform: translate(380px, 15px); } /* Float Start (5s) */
+    83% { transform: translate(380px, 0); } /* Float End (5s) */
+    92% { transform: translate(380px, 0); }
+    100% { transform: translate(0, 0); } /* Reposition Left (5s) */
+  }
+
+  @keyframes logo-sequence-img {
+    0%, 50% { transform: rotate(-30deg); } /* rotate-head idle */
+    25% { transform: rotate(30deg); }
+
+    50%, 58% { transform: rotate(-30deg); }
+
+    58%, 60% { transform: rotate(-30deg); } /* Start Shake at right */
+    61% { transform: rotate(-35deg); }
+    62% { transform: rotate(-25deg); }
+    63% { transform: rotate(-35deg); }
+    64% { transform: rotate(-25deg); }
+    65% { transform: rotate(-30deg); } /* End Shake */
+
+    65%, 100% { transform: rotate(-30deg); } /* rotate-head back to idle */
   }
 
   @keyframes rotate-head {
@@ -74,16 +100,48 @@
       transform: rotate(-30deg);
     }
   }
-
-  @keyframes float {
+  @keyframes reposition-right {
     0% {
       transform: translateX(0px);
     }
-    50% {
+    100% {
+      transform: translateX(380px);
+    }
+  }
+  @keyframes reposition-left {
+    0% {
       transform: translateX(380px);
     }
     100% {
       transform: translateX(0px);
+    }
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes shake {
+    0%, 90%, 100% {
+      transform: rotate(0deg);
+    }
+    92% {
+      transform: rotate(-25deg);
+    }
+    94% {
+      transform: rotate(25deg);
+    }
+    96% {
+      transform: rotate(-25deg);
+    }
+    98% {
+      transform: rotate(25deg);
     }
   }
 
@@ -116,6 +174,25 @@
     }
   }
 
+  @keyframes logo-sequence-mobile-wrapper {
+    0%, 50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes logo-sequence-mobile-img {
+    0%, 50% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+
+    90% { transform: rotate(0deg); }
+    92% { transform: rotate(-5deg); }
+    94% { transform: rotate(5deg); }
+    96% { transform: rotate(-5deg); }
+    98% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
   @media (max-width: 1024px) {
     .about-section {
       flex-direction: column-reverse;
@@ -134,13 +211,13 @@
       position: absolute;
       left: calc(50% - 30px);
       top: -60px;
-      animation: float-mobile 5s ease-in-out infinite;
+      animation: logo-sequence-mobile-wrapper 30s ease-in-out infinite;
     }
 
     .logo-img{
       width: 60px;
       transform: rotate(0deg);
-      animation: shake-mobile 15s ease-in-out infinite;
+      animation: logo-sequence-mobile-img 30s ease-in-out infinite;
     }
   }
 </style>

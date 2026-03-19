@@ -13,9 +13,9 @@ import "./commercial-styles.css";
     <commercial-menu />
     <main class="content">
       <commercial-about />
-      <commercial-development />
-      <commercial-references />
       <commercial-services />
+      <commercial-references />
+      <commercial-development />
       <commercial-contact />
     </main>
   </div>

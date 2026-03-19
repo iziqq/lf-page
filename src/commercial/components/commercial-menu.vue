@@ -12,9 +12,9 @@ type MenuItem = {
 
 const menuItems: Ref<MenuItem[]> = ref([
   { label: 'nav.about', href: '#about' },
-  { label: 'nav.development', href: '#development' },
-  { label: 'nav.references', href: '#references' },
   { label: 'nav.services', href: '#services' },
+  { label: 'nav.references', href: '#references' },
+  { label: 'nav.development', href: '#development' },
   { label: 'nav.contact', href: '#contact' },
 ])
 

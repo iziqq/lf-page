@@ -21,6 +21,31 @@
   --main-gray-darker: #4a4a4a;
 
   --main-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Tmavší červené - perfektní pro white text */
+  --red: #5a0f0f;
+  --red-20: #561111;
+  --red-40: #4a0d0d;
+  --red-60: #3e0a0a;
+  --red-80: #1f0505;
+
+  /* Tmavší zelené - skvělý kontrast */
+  --green: #0f4a23;
+  --green-20: #0d4220;
+  --green-40: #0a351a;
+  --green-60: #082814;
+  --green-80: #04170b;
+
+  /* Error varianty - už OK */
+  --error: #c23b1a;
+  --error-hover: #a63315;
+  --error-active: #8a2811;
+
+  /* Zbytek - vylepšené pro white text */
+  --warning: #cc7f00;
+  --success: #158f4e;
+  --gray: #4a4a4a;
+  --white: #FFFFFF;
 }
 
 html {
@@ -47,4 +72,58 @@ p, span, button, input, textarea{
   font-family: Inter, sans-serif;
   padding: 0;
   margin: 0;
+}
+
+input{
+  padding: 0;
+  margin: 0;
+}
+
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  position: relative;
+}
+
+.input-wrapper__correct{
+  border: 2px solid var(--success) !important;
+  background: var(--green) !important;
+
+  &&:hover{
+    background: var(--green) !important;
+    border: 2px solid var(--success) !important;
+  }
+}
+
+.input-wrapper__error{
+  border: 2px solid var(--error) !important;
+  background: var(--red) !important;
+
+  &&:hover{
+    background: var(--red) !important;
+    border: 2px solid var(--error) !important;
+  }
+}
+
+.input-wrapper__input{
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid var(--main-gray-dark);
+  background: var(--main-black);
+  color: var(--main-white);
+
+  transition: all 0.2s ease-in-out;
+
+  outline: none;
+
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+}
+
+.input-wrapper__label{
+  font-family: KoneInformation, sans-serif;
+  font-size: 18px;
 }

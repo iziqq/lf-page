@@ -7,6 +7,12 @@
     "contact": "Kontakt",
     "login": "Přihlásit se"
   },
+  "email": "Email",
+  "password": "Heslo",
+  "login": "Přihlásit se",
+  "validation": {
+    "invalidEmail": "Neplatná emailová adresa"
+  },
   "commercial": {
     "title": "Komerční pohled",
     "about": {

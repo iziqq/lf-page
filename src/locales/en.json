@@ -7,6 +7,12 @@
     "contact": "Contact",
     "login": "Login"
   },
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "validation": {
+    "invalidEmail": "Invalid email address"
+  },
   "commercial": {
     "title": "Commercial view",
     "about": {

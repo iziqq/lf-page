@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import {type Ref, ref} from "vue";
-import { useCommercialStore } from "@/commercial/stores/commercial-store";
+import { useCommercialStore } from "@/commercial/backend/commercial.store.ts";
 
 const commercialStore = useCommercialStore();
 
@@ -55,7 +55,7 @@ const closeMenu = () => {
         </div>
 
         <div class="login-section">
-          <a href="/login" class="menu-item login-button" @click="closeMenu">
+          <a href="/auth" class="menu-item login-button" @click="closeMenu">
             {{ $t('nav.login') }}
           </a>
         </div>

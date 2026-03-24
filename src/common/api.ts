@@ -1,7 +1,7 @@
 import router from "@/common/router";
 import {getSavedSeatId} from "@/common/seat/seat.ts";
 
-const API_BASE_URL = 'http://localhost:7071/api';
+const API_BASE_URL = 'https://lf-api-ena6ajaaedgegqf5.westeurope-01.azurewebsites.net/api';
 export interface ApiErrorResponse {
     message: string;
     code?: string;

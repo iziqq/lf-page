@@ -11,8 +11,15 @@
   "password": "Heslo",
   "login": "Přihlásit se",
   "validation": {
-    "invalidEmail": "Neplatná emailová adresa"
+    "invalidEmail": "Neplatná emailová adresa",
+    "invalidCode": "Kód musí mít 6 číslic"
   },
+  "auth": {
+    "2faTitle": "Dvoufázové ověření",
+    "2faDescription": "Zadejte 6místný kód, který jsme vám zaslali.",
+    "2faCode": "Ověřovací kód"
+  },
+  "verify": "Ověřit",
   "commercial": {
     "title": "Komerční pohled",
     "about": {

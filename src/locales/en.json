@@ -11,8 +11,15 @@
   "password": "Password",
   "login": "Login",
   "validation": {
-    "invalidEmail": "Invalid email address"
+    "invalidEmail": "Invalid email address",
+    "invalidCode": "The code must be 6 digits"
   },
+  "auth": {
+    "2faTitle": "Two-factor authentication",
+    "2faDescription": "Enter the 6-digit code we sent you.",
+    "2faCode": "Verification code"
+  },
+  "verify": "Verify",
   "commercial": {
     "title": "Commercial view",
     "about": {

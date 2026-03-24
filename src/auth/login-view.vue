@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import LoginForm from '@/auth/components/login-form.vue';
+import Login2faForm from '@/auth/components/login-2fa-form.vue';
 import {authStore} from "@/auth/backend/auth.store.ts";
 
 const store = authStore();
@@ -7,7 +8,8 @@ const store = authStore();
 
 <template>
   <div class="login-view">
-    <login-form @login="store.tryLogin" />
+    <login-form v-if="!store.is2faRequired" @login="store.tryLogin" />
+    <login-2fa-form v-else @verify="store.verifyLogin" />
   </div>
 </template>
 

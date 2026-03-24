@@ -29,6 +29,7 @@ import CheckIcon from "@/assets/icons/check-icon.vue";
   }
 
   .correct-badge__icon{
-    stroke: var(--black);
+    stroke: var(--white);
+    stroke-width: 2px;
   }
 </style>

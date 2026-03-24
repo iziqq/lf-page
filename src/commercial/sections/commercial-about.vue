@@ -15,6 +15,15 @@
         {{ $t('commercial.about.name') }}
       </h3>
     </div>
+    <div class="change-log">
+      <h4>Change log</h4>
+      <p>23.03.2026</p>
+      <menu>
+        <li>Login stránka - zatím bez backendu a ještě bude malinko přestylovaná</li>
+        <li>Seat ID - zatím pinguje jenom na localhost</li>
+        <li>Připravuje se backend na Auth: <a href="https://github.com/iziqq/lf-azure-function">https://github.com/iziqq/lf-azure-function</a></li>
+      </menu>
+    </div>
   </section>
 </template>
 
@@ -22,7 +31,7 @@
   .about-section {
     min-height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color: var(--main-white);
     padding: 0 20px;
 
@@ -219,5 +228,17 @@
       transform: rotate(0deg);
       animation: logo-sequence-mobile-img 30s ease-in-out infinite;
     }
+  }
+
+  .change-log{
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--main-orange-dark);
+    backdrop-filter: blur(24px);
+    color: var(--main-white);
+    gap: 4px;
   }
 </style>

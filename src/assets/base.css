@@ -63,8 +63,12 @@ h1, h2, h3, h4, h5, h6{
   margin: 0;
 }
 
-a{
+a, li{
   font-family: 'Montserrat', sans-serif;
+}
+
+li > a{
+  color: var(--main-white);
 }
 
 p, span, button, input, textarea{

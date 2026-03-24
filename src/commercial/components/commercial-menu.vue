@@ -1,9 +1,11 @@
 <script setup lang="ts">
 
 import {type Ref, ref} from "vue";
+import { useRouter } from "vue-router";
 import { useCommercialStore } from "@/commercial/backend/commercial.store.ts";
 
 const commercialStore = useCommercialStore();
+const router = useRouter();
 
 type MenuItem = {
   label: string,
@@ -26,6 +28,11 @@ const toggleMenu = () => {
 
 const closeMenu = () => {
   isMenuOpen.value = false
+}
+
+const goToLogin = () => {
+  router.push('/auth');
+  closeMenu();
 }
 </script>
 
@@ -55,9 +62,13 @@ const closeMenu = () => {
         </div>
 
         <div class="login-section">
-          <a href="/auth" class="menu-item login-button" @click="closeMenu">
+          <router-link
+            to="/auth"
+            class="menu-item login-button"
+            @click="goToLogin"
+          >
             {{ $t('nav.login') }}
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
@@ -125,6 +136,7 @@ const closeMenu = () => {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     white-space: nowrap;
+    cursor: pointer;
   }
 
   .menu-item:hover, .menu-item.active {

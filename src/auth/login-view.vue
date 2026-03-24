@@ -1,17 +1,13 @@
 <script setup lang="ts">
 import LoginForm from '@/auth/components/login-form.vue';
-import type { EmailAddress } from '@/common/domains/email-address.ts';
-import type { Password } from '@/common/domains/password.ts';
+import {authStore} from "@/auth/backend/auth.store.ts";
 
-const onLogin = (email: EmailAddress, password: Password) => {
-  console.log('Login attempt with:', { email, password });
-  // Zde se později napojí auth.service
-};
+const store = authStore();
 </script>
 
 <template>
   <div class="login-view">
-    <login-form @login="onLogin" />
+    <login-form @login="store.tryLogin" />
   </div>
 </template>
 

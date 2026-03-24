@@ -6,8 +6,8 @@ import CorrectBadge from "@/shared/badges/correct-badge.vue";
 import ErrorBadge from "@/shared/badges/error-badge.vue";
 
 interface Props {
-  defaultValue: string;
-  hasError?: boolean;
+  defaultValue?: string;
+  invalid?: boolean;
   errorMessage?: string;
 }
 
@@ -43,13 +43,13 @@ const isCorrect = () => {
 }
 
 onMounted(() => {
-  localValue.value = props.defaultValue;
+  localValue.value = props.defaultValue ?? '';
 })
 
 watch(
     () => props.defaultValue,
     (newVal) => {
-      localValue.value = newVal;
+      localValue.value = newVal ?? '';
     }
 );
 
@@ -69,22 +69,22 @@ watch(
         type="email"
         class="input-wrapper__input"
         :class="[
-          isWarning() || hasError ? 'input-wrapper__error' : '',
-          isCorrect() && !hasError ? 'input-wrapper__correct' : '',
+          isWarning() || invalid ? 'input-wrapper__error' : '',
+          isCorrect() && !invalid ? 'input-wrapper__correct' : '',
         ]"
         :value="localValue"
         @input="handleInput"
     />
 
     <warning-badge
-      v-if="isWarning() && !hasError"
+      v-if="isWarning() && !invalid"
       :tooltip-text="$t('validation.invalidEmail')"
     />
 
-    <correct-badge v-if="isCorrect() && !hasError" />
+    <correct-badge v-if="isCorrect() && !invalid" />
 
     <error-badge
-      v-if="hasError"
+      v-if="invalid"
       :tooltip-text="errorMessage"
     />
   </div>

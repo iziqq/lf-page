@@ -3,20 +3,19 @@ import {registerSeatService} from "@/common/seat/seat.service.ts";
 
 const SEAT_ID_KEY = "IziSeatId";
 
-export async function registerSeat(): Promise<string | null> {
+export async function registerSeat(): Promise<void> {
     try{
         const savedSeatId = getSavedSeatId();
 
+      if (! savedSeatId){
         const request = createSeatRegisterRequest(savedSeatId);
         const response = await registerSeatService(request);
 
-        if (! savedSeatId)
-            saveSeatId(response.seatId);
-
-        return response.seatId;
+        saveSeatId(response.seatId);
+      }
     }
     catch (e) {
-        return null;
+        console.error(e);
     }
 
 }

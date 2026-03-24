@@ -1,4 +1,3 @@
-@import "./fonts/koneInformation/kone-information.css";
 @import "./fonts/inter/inter.css";
 
 :root{
@@ -59,13 +58,13 @@ body, #app{
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: KoneInformation, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0;
 }
 
 a{
-  font-family: KoneInformation, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 p, span, button, input, textarea{
@@ -124,6 +123,6 @@ input{
 }
 
 .input-wrapper__label{
-  font-family: KoneInformation, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
 }
